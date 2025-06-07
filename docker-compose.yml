@@ -1,0 +1,26 @@
+services:
+  ai-frontend:
+    container_name: ai-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - ai-backend
+    networks:
+      - ai-network
+
+  ai-backend:
+    container_name: ai-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 5005:5005
+    networks:
+      - ai-network
+
+networks:
+  ai-network:
+    driver: bridge
