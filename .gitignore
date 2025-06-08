@@ -331,6 +331,8 @@ $RECYCLE.BIN/
 
 #Rasa
 .rasa
+backend/models
+!rasa.log
 
 # End of https://www.toptal.com/developers/gitignore/api/node,react,jetbrains+all,visualstudiocode,macos,windows
 

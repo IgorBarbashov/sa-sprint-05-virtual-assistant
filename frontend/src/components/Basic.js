@@ -38,7 +38,7 @@ function Basic() {
 
   // Функция для отправки сообщения на сервер Rasa и получения ответа
   const rasaAPI = async function handleClick(name, msg) {
-    await fetch("http://localhost:5005/webhooks/rest/webhook", {
+    await fetch("http://158.160.187.185:5005/webhooks/rest/webhook", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -88,13 +88,14 @@ function Basic() {
     backgroundColor: "#1C57CD",
   };
   const styleFooter = {
+    height: "4rem",
     borderTop: "1px solid black",
     borderRadius: "0px 0px 30px 30px",
     backgroundColor: "#1C57CD",
   };
   const styleBody = {
     paddingTop: "10px",
-    height: "28rem",
+    height: "calc(100vh - 8.5rem)",
     overflowY: "auto",
     overflowX: "hidden",
   };
