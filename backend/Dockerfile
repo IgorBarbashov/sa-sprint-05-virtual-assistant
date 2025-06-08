@@ -9,4 +9,4 @@ COPY . .
 RUN pip install -r requirements.txt
 RUN rasa train
 
-CMD rasa run --enable-api --corse "*"
+CMD rasa run --enable-api --cors "*"
